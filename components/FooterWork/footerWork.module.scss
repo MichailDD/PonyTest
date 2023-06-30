@@ -1,3 +1,4 @@
+<<<<<<< HEAD:components/FooterWork/footerWork.module.scss
 // <div className={s.footerWr}>
 // <div className={s.footerBody}>
 //   <div className={s.footerTop}>
@@ -20,14 +21,34 @@
 
 .footerWr {
   background: #272557;
+=======
+.footerWr {
+  background: #272557;
+  position: relative;
+>>>>>>> danil:src/components/FooterWork/footerWork.module.scss
 }
 .footerBody {
 }
 .footerTop {
   display: grid;
+<<<<<<< HEAD:components/FooterWork/footerWork.module.scss
   grid-template-columns: 10% 1fr;
   gap: 146px;
 }
+=======
+  grid-template-columns: 19% 1fr;
+  gap: 137px;
+  padding: 23px 0;
+}
+
+.footerUl {
+  padding: 0;
+  list-style: none;
+  margin-right: 88px !important;
+  margin-top: 22px !important;
+}
+
+>>>>>>> danil:src/components/FooterWork/footerWork.module.scss
 .logo {
 }
 
@@ -41,8 +62,16 @@
   color: #f43658;
   margin-bottom: 16px;
   cursor: pointer;
+<<<<<<< HEAD:components/FooterWork/footerWork.module.scss
 }
 
+=======
+  margin-bottom: 16px;
+}
+.footerRight {
+  display: flex;
+}
+>>>>>>> danil:src/components/FooterWork/footerWork.module.scss
 .footerLi {
   font-family: "Nunito";
   font-style: normal;
@@ -53,4 +82,48 @@
   font-feature-settings: "pnum" on, "lnum" on;
   cursor: pointer;
   color: #ffffff;
+<<<<<<< HEAD:components/FooterWork/footerWork.module.scss
+=======
+  margin-bottom: 6px;
+}
+
+.footerBottom {
+  display: flex;
+  padding: 22px 0;
+  position: relative;
+  z-index: 1;
+}
+.footerText1 {
+  margin-right: 566px;
+}
+
+.footerText2 {
+}
+
+.footerText {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.footerLogos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 59px;
+  width: 117px;
+}
+.imgs {
+}
+
+.footerBottomBack {
+  position: absolute;
+  background: #322f71;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+>>>>>>> danil:src/components/FooterWork/footerWork.module.scss
 }

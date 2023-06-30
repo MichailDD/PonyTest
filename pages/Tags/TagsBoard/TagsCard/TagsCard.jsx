@@ -3,15 +3,23 @@ import Modal from 'react-modal';
 import  s from "./TagsCard.module.css"
 import TitlePages from '../../../../components/TitlePages/TitlePages';
 import tagsState from '../../TagsState';
+<<<<<<< HEAD:pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
 import tagsCardSate from './TagsCardState';
 import Button from '../../../../components/Buttons/Button/Button';
+=======
+>>>>>>> danil:src/pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
 import BlueBtn from '../../../../components/Buttons/BlueBtn/BlueBtn';
 const TagsCard = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [task, setTask] = useState('');
   const [tagColor, setTagColor] = useState('');
+<<<<<<< HEAD:pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
   const [colorOptions] = useState(['#B71C1C', '#DE3B31', '#FF6B62', '#43A047','#62C966','#ADF1B0','#0F498C','#1565C0','#4A98F1','#A4CEFF','#FF9800','#FFD600','#FFED8D','#474747','#818181','#CCCCCC','#6D28AE','#A258E7',' #CD98FF','#E6CBFF']); 
   const [taskList, setTaskList] = useState([]); 
+=======
+  const [colorOptions] = useState(['red', 'blue', 'green']); // Предложенные цвета
+  const [taskList, setTaskList] = useState([]); // Список задач
+>>>>>>> danil:src/pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -54,6 +62,7 @@ const TagsCard = () => {
             <TitlePages title={tagsState[0].title1}/>
             <button onClick={openModal} className={s.add__btn}>{tagsState[0].title2}</button>
         </div>
+<<<<<<< HEAD:pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal}
          style={{
           overlay: {
@@ -78,6 +87,15 @@ const TagsCard = () => {
             {colorOptions.map((color) => (
               <label className={s.label__color} key={color} style={{ backgroundColor: color }}>
                 {/* <img className={s.label__img} src={tagsCardSate[0].icon5} alt="icon" /> */}
+=======
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
+        <h2>Добавить задачу</h2>
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={task} onChange={handleTaskChange} placeholder="Введите задачу" />
+          <div className="color-options">
+            {colorOptions.map((color) => (
+              <label className={s.label__color} key={color} style={{ backgroundColor: color }}>
+>>>>>>> danil:src/pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
                 <input className={s.input__color}
                   type="radio"
                   name="color"
@@ -85,6 +103,7 @@ const TagsCard = () => {
                   checked={tagColor === color}
                   onChange={handleTagColorChange}
                   backgroundColor={color}
+<<<<<<< HEAD:pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
                 />
                 <span className={s.option} />
               </label>
@@ -105,6 +124,15 @@ const TagsCard = () => {
             <Button title={'Cancel'}/>
           <button className={s.btn} type="submit"> Submit</button>
           </div>
+=======
+
+                />
+                <span className="color-option" />
+              </label>
+            ))}
+                      </div>
+          <button type="submit">Добавить задачу</button>
+>>>>>>> danil:src/pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
         </form>
       </Modal>
 
@@ -115,6 +143,7 @@ const TagsCard = () => {
                 <span className={`${s.color} ${s.taskBoard__title}`}>{tagsState[1].span2}</span>
                 <span className={`${s.privacy} ${s.taskBoard__title}`}>{tagsState[1].span3}</span>
       </div>
+<<<<<<< HEAD:pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
       <div className={s.taskBoard__cards}>
               {taskList.map((task, index) => (
               <div className={s.task__color}>
@@ -136,6 +165,20 @@ const TagsCard = () => {
                   </div>
                    </div>
         ))}          
+=======
+      <div className={s.taskBoard__card}>
+      {taskList.map((task, index) => (
+          <div className={s.task__color}key={index} style={{ backgroundColor: task.color }}>
+            {task.task}   
+                   
+          </div>
+        ))}
+        {
+            taskList.map((task,index)=>(
+                <div  className={s.span} style={{backgroundColor:task.color}}></div>  
+            ))
+        }
+>>>>>>> danil:src/pages/Tags/TagsBoard/TagsCard/TagsCard.jsx
       </div>
       </div>
     </div>

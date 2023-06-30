@@ -1,3 +1,4 @@
+<<<<<<< HEAD:components/RoadMap/roadMap.module.scss
 // <div className={`${s.roadmap} container`}>
 //       <p className={s.title}>Roadmap</p>
 //       <div className={s.cardsWr}>
@@ -21,6 +22,11 @@
 
 .roadmap {
   margin-top: 30px;
+=======
+.roadmap {
+  margin-top: 30px;
+  margin-bottom: 46px;
+>>>>>>> danil:src/components/RoadMap/roadMap.module.scss
 }
 .title {
   font-family: "Poppins";

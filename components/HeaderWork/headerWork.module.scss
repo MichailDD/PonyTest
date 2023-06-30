@@ -16,6 +16,10 @@
 }
 .logo {
   margin-right: 597px;
+<<<<<<< HEAD:components/HeaderWork/headerWork.module.scss
+=======
+  cursor: pointer;
+>>>>>>> danil:src/components/HeaderWork/headerWork.module.scss
 }
 .right {
   display: flex;
@@ -88,10 +92,18 @@
 .avatarWr {
   display: flex;
   align-items: center;
+<<<<<<< HEAD:components/HeaderWork/headerWork.module.scss
 }
 
 .avatarText {
   margin-left: 19px;
+=======
+  position: relative;
+}
+
+.avatarText {
+  margin-left: 18px;
+>>>>>>> danil:src/components/HeaderWork/headerWork.module.scss
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
@@ -108,3 +120,34 @@
   fill: #7791c2;
   height: 17px;
 }
+<<<<<<< HEAD:components/HeaderWork/headerWork.module.scss
+=======
+
+ul.avatarMenu {
+  display: none;
+  position: absolute;
+  padding: 10px 20px !important;
+  position: absolute;
+  background: #ffffff;
+  top: 45px;
+  right: 0;
+  padding: 11px 15px;
+  z-index: 999;
+  border: 1px solid #1565c0;
+  &.active {
+    display: block;
+  }
+}
+
+.avatarMenuText {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.0595px;
+  color: #7791c2;
+  cursor: pointer;
+  margin-bottom: 13px;
+}
+>>>>>>> danil:src/components/HeaderWork/headerWork.module.scss
