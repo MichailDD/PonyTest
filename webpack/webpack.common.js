@@ -6,6 +6,12 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"]
   },
+  output: {
+    path: path.resolve(__dirname, "..", "docs/"),
+    filename: "scripts/bundle[hash].js",
+    clean: true,
+    publicPath: "/"
+  },
   cache: false,
   module: {
     rules: [
@@ -20,30 +26,29 @@ module.exports = {
       },
       {
         test: /\.(css|sass|scss)$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, path.resolve(__dirname, "../src/components/UI"), path.resolve(__dirname, "../src/components/Client/")],
         generator: {
-          filename: `styles/[name][hash][ext]`
+          filename: "styles/[name][hash][ext]"
         },
         use: ["style-loader", {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             modules: {
-              localIdentName: '[local]__[hash:base64:5]'
+              localIdentName: "[local]__[hash:base64:5]"
             }
           }
         }, "sass-loader"]
       },
       {
         test: /\.(css|sass|scss)$/,
-        exclude: /src/,
-        generator: {
-          filename: `styles/[name][hash][ext]`
-        },
+        include: [
+          path.resolve(__dirname, "../src/components/UI"), path.resolve(__dirname, "../src/components/Client/")
+        ],
         use: ["style-loader", {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             modules: {
-              localIdentName: '[local]'
+              localIdentName: "[local]"
             }
           }
         }, "sass-loader"]
@@ -52,7 +57,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
         type: "asset/resource",
         generator: {
-          filename: 'fonts/[name][hash][ext]'
+          filename: "fonts/[name][hash][ext]"
         }
       },
     ]
