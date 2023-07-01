@@ -1,4 +1,4 @@
-import s from "./App.module.css";
+  import s from "./App.module.css";
 import { Route, Routes } from "react-router-dom";
 import DashBoard from "./pages/Dashboard/Dashboard";
 import CreatePost from "./pages/Posts/CreatePost/CreatePost";
